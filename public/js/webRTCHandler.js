@@ -42,6 +42,7 @@ export const getLocalPreview = () => {
 
 const createPeerConnection = () => {
   const configuration = {
+    console.log(turnServers);
     iceServers: [...turnServers, {url: 'stun: stun.1und1.de:3478'}],
     iceTransportPolicy: 'relay',
   };
